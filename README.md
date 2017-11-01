@@ -15,3 +15,9 @@ The dog owners can upload pictures of their dogs and set a price per hour. The o
 With this app, the dogless people can hang out with a dog whenever they want without having to take care of one and dog owners don't have to pay through the nose to get their dog's daily exercise, but instead make some extra cash from it. This is the primary service of the app.
 
 The secondary service is connecting dog owners to go on doggy dates. Dog owners can browse other dogs to "rent" for a few hours for own dog to have a companion to play with.
+
+## Design
+
+### Wireframe
+
+The wireframe can be found [here](https://www.figma.com/file/HD815GS7VpxNAl14yATSUXK7/Pupper).
