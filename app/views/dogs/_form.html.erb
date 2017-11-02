@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :price %> $/hour
+    <%= form.text_field :price, id: :dog_price %>
+  </div>
+
+  <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description, id: :dog_description %>
   </div>
