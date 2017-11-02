@@ -1,0 +1,67 @@
+<%= form_with(model: dog, local: true) do |form| %>
+  <% if dog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dog.errors.count, "error") %> prohibited this dog from being saved:</h2>
+
+      <ul>
+      <% dog.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :dog_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :dog_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age, id: :dog_age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tricks %>
+    <%= form.check_box :tricks, id: :dog_tricks %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kid_friendly %>
+    <%= form.check_box :kid_friendly, id: :dog_kid_friendly %>
+  </div>
+
+  <div class="field">
+    <%= form.label :obedient %>
+    <%= form.check_box :obedient, id: :dog_obedient %>
+  </div>
+
+  <div class="field">
+    <%= form.label :energetic %>
+    <%= form.check_box :energetic, id: :dog_energetic %>
+  </div>
+
+  <div class="field">
+    <%= form.label :small %>
+    <%= form.check_box :small, id: :dog_small %>
+  </div>
+
+  <div class="field">
+    <%= form.label :medium %>
+    <%= form.check_box :medium, id: :dog_medium %>
+  </div>
+
+  <div class="field">
+    <%= form.label :large %>
+    <%= form.check_box :large, id: :dog_large %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
