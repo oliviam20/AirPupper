@@ -16,7 +16,7 @@
             <h4 class="card-title"><%= dog.name %>, <%= dog.age %></h4>
             <p class="card-text">
               <p>$<%= dog.price %></p>
-              <p>Posted by <%# dog.user.profile.username %></p>
+              <p>Posted by <%= dog.user.username %></p>
               <%= dog.description %>
               <br><br>
 
