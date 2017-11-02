@@ -2,45 +2,84 @@
 
 <h1>Dogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Age</th>
-      <th>Tricks</th>
-      <th>Kid friendly</th>
-      <th>Obedient</th>
-      <th>Energetic</th>
-      <th>Small</th>
-      <th>Medium</th>
-      <th>Large</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @dogs.each do |dog| %>
-      <tr>
-        <td><%= dog.name %></td>
-        <td><%= dog.description %></td>
-        <td><%= dog.age %></td>
-        <td><%= dog.tricks %></td>
-        <td><%= dog.kid_friendly %></td>
-        <td><%= dog.obedient %></td>
-        <td><%= dog.energetic %></td>
-        <td><%= dog.small %></td>
-        <td><%= dog.medium %></td>
-        <td><%= dog.large %></td>
-        <td><%= image_tag(dog.image_url.to_s) %></td>
-        <td><%= link_to 'Show', dog %></td>
-        <td><%= link_to 'Edit', edit_dog_path(dog) %></td>
-        <td><%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
 <%= link_to 'New Dog', new_dog_path %>
+
+<div class="container">
+  <div class="card-columns">
+    <% @dogs.reverse.each do |dog| %>
+  <!-- data-aos="fade-up" data-aos-duration="2000" -->
+      <div data-aos="fade-up" data-aos-duration="2000">
+        <div class="card">
+          <%= image_tag(dog.image_url.to_s, class: "picture_icon, card-img-top") %>
+
+          <div class="card-body">
+            <h4 class="card-title"><%= dog.name %>, <%= dog.age %></h4>
+            <p class="card-text">
+              <p>$<%# dog.price %></p>
+              <p>Posted by <%# dog.user.profile.username %></p>
+              <%= dog.description %>
+              <br><br>
+
+              <div class="row">
+                <div class="col">
+                  <% if dog.tricks? %>
+                    <p>Tricks</p>
+                  <% end %>
+                </div>
+                <div class="col">
+                  <% if dog.kid_friendly? %>
+                    <p>Kid friendly</p>
+                  <% end %>
+                </div>
+                <div class="col">
+                  <% if dog.obedient? %>
+                    <p>Obedient</p>
+                  <% end %>
+                </div>
+              </div><!-- end row -->
+
+              <div class="row">
+                <div class="col">
+                <% if dog.energetic? %>
+                  <p>Energetic</p>
+                <% end %>
+                </div>
+                <div class="col">
+                  <% if dog.small? %>
+                    <p>Small</p>
+                  <% end %>
+                </div>
+                <div class="col">
+                  <% if dog.medium? %>
+                    <p>Medium</p>
+                  <% end %>
+                </div>
+                <div class="col">
+                  <% if dog.large? %>
+                    <p>Large</p>
+                  <% end %>
+                </div>
+              </div><!-- end row -->
+
+            </p>
+
+            <p>
+              <% if dog.user_id == current_user.id %>
+                <%= link_to 'Edit', edit_dog_path(dog) %>
+                <%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
+              <%= link_to 'Show', dog %>
+            </p>
+          </div> <!-- end card-body div -->
+
+          <div class="card-footer">
+            <small class="text-muted"><%= time_ago_in_words(dog.created_at) %> ago</small>
+          </div>
+
+        </div> <!-- end card div -->
+      </div>
+
+
+    <% end %>
+  </div> <!-- end card-column -->
+</div> <!-- end container -->
