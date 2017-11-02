@@ -18,6 +18,10 @@ The secondary service is connecting dog owners to go on doggy dates. Dog owners 
 
 ## Design
 
+### User stories
+
+User stories can be found [here](https://trello.com/b/pEzn2BLx/airpupper).
+
 ### Wireframe
 
 The wireframe can be found [here](https://www.figma.com/file/HD815GS7VpxNAl14yATSUXK7/Pupper).
