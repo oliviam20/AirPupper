@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dog.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dog.description %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @dog.age %>
+</p>
+
+<p>
+  <%= image_tag(@dog.image_url.to_s) %>
+</p>
+
+<p>
+  <strong>Tricks:</strong>
+  <%= @dog.tricks %>
+</p>
+
+<p>
+  <strong>Kid friendly:</strong>
+  <%= @dog.kid_friendly %>
+</p>
+
+<p>
+  <strong>Obedient:</strong>
+  <%= @dog.obedient %>
+</p>
+
+<p>
+  <strong>Energetic:</strong>
+  <%= @dog.energetic %>
+</p>
+
+<p>
+  <strong>Small:</strong>
+  <%= @dog.small %>
+</p>
+
+<p>
+  <strong>Medium:</strong>
+  <%= @dog.medium %>
+</p>
+
+<p>
+  <strong>Large:</strong>
+  <%= @dog.large %>
+</p>
+
+<%= link_to 'Edit', edit_dog_path(@dog) %> |
+<%= link_to 'Back', dogs_path %>

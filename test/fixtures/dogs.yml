@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  age: 1
+  tricks: false
+  kid_friendly: false
+  obedient: false
+  energetic: false
+  small: false
+  medium: false
+  large: false
+
+two:
+  name: MyString
+  description: MyText
+  age: 1
+  tricks: false
+  kid_friendly: false
+  obedient: false
+  energetic: false
+  small: false
+  medium: false
+  large: false
