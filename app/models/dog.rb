@@ -7,9 +7,11 @@ class Dog < ApplicationRecord
 
   validates :price, presence: true, numericality: { greater_than: 0 }
 
-  validates :description, presence: true, length: { minimum: 20, maximum: 150 }
+  validates :description, presence: true, length: { minimum: 20, maximum: 250 }
 
   validates :age, presence: true, numericality: { only_integer: true, greater_than: -1 }
+
+  validates :breed, presence: true, length: { minimum: 3, maximum: 30 }
 
   def self.search(term)
     if term
