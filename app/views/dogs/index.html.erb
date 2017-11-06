@@ -4,6 +4,11 @@
 
 <%= link_to 'New Dog', new_dog_path %>
 
+<%= form_tag(dogs_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
 <div class="container">
   <div class="card-columns">
     <% @dogs.reverse.each do |dog| %>
