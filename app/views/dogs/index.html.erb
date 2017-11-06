@@ -4,8 +4,6 @@
 
 <%= link_to 'New Dog', new_dog_path %>
 
-<%= link_to "Mailbox", conversations_path, class: "item" %>
-
 <div class="container">
   <div class="card-columns">
     <% @dogs.reverse.each do |dog| %>
