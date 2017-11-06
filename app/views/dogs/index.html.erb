@@ -4,82 +4,90 @@
 
 <%= link_to 'New Dog', new_dog_path %>
 
+<%= form_tag(dogs_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
 <div class="container">
   <div class="card-columns">
     <% @dogs.reverse.each do |dog| %>
-  <!-- data-aos="fade-up" data-aos-duration="2000" -->
-      <div data-aos="fade-up" data-aos-duration="2000">
-        <div class="card">
-          <%= image_tag(dog.image_url.to_s, class: "picture_icon, card-img-top") %>
+      <div class="card">
+        <%= image_tag(dog.image_url.to_s, class: "picture_icon, card-img-top") %>
 
-          <div class="card-body">
-            <h4 class="card-title"><%= dog.name %>, <%= dog.age %></h4>
-            <p class="card-text">
-              <p>$<%= dog.price %></p>
-              <p>Posted by <%= dog.user.username %></p>
-              <%= dog.description %>
-              <br><br>
+        <div class="card-body">
+          <h4 class="card-title"><%= dog.name %>, <%= dog.age %></h4>
+          <p class="card-text">
+            <p>$<%= dog.price %></p>
+            <p><%= dog.breed %></p>
+            <p>Posted by <%= dog.user.username %></p>
+            <%= dog.description %>
+            <br><br>
 
-              <div class="row">
-                <div class="col">
-                  <% if dog.tricks? %>
-                    <p>Tricks</p>
-                  <% end %>
-                </div>
-                <div class="col">
-                  <% if dog.kid_friendly? %>
-                    <p>Kid friendly</p>
-                  <% end %>
-                </div>
-                <div class="col">
-                  <% if dog.obedient? %>
-                    <p>Obedient</p>
-                  <% end %>
-                </div>
-              </div><!-- end row -->
-
-              <div class="row">
-                <div class="col">
-                <% if dog.energetic? %>
-                  <p>Energetic</p>
+            <div class="row">
+              <div class="col">
+                <% if dog.tricks? %>
+                  <p>Tricks</p>
                 <% end %>
-                </div>
-                <div class="col">
-                  <% if dog.small? %>
-                    <p>Small</p>
-                  <% end %>
-                </div>
-                <div class="col">
-                  <% if dog.medium? %>
-                    <p>Medium</p>
-                  <% end %>
-                </div>
-                <div class="col">
-                  <% if dog.large? %>
-                    <p>Large</p>
-                  <% end %>
-                </div>
-              </div><!-- end row -->
+              </div>
+              <div class="col">
+                <% if dog.kid_friendly? %>
+                  <p>Kid friendly</p>
+                <% end %>
+              </div>
+              <div class="col">
+                <% if dog.obedient? %>
+                  <p>Obedient</p>
+                <% end %>
+              </div>
+            </div><!-- end row -->
 
-            </p>
-
-            <p>
-              <% if dog.user_id == current_user.id %>
-                <%= link_to 'Edit', edit_dog_path(dog) %>
-                <%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <div class="row">
+              <div class="col">
+              <% if dog.energetic? %>
+                <p>Energetic</p>
               <% end %>
-              <%= link_to 'Show', dog %>
-            </p>
-          </div> <!-- end card-body div -->
+              </div>
+              <div class="col">
+                <% if dog.small? %>
+                  <p>Small</p>
+                <% end %>
+              </div>
+              <div class="col">
+                <% if dog.medium? %>
+                  <p>Medium</p>
+                <% end %>
+              </div>
+              <div class="col">
+                <% if dog.large? %>
+                  <p>Large</p>
+                <% end %>
+              </div>
+            </div><!-- end row -->
 
-          <div class="card-footer">
-            <small class="text-muted"><%= time_ago_in_words(dog.created_at) %> ago</small>
-          </div>
+          </p>
 
-        </div> <!-- end card div -->
-      </div>
+          <p>
+            <% if dog.user_id == current_user.id %>
+              <%= link_to 'Edit', edit_dog_path(dog) %>
+              <%= link_to 'Destroy', dog, method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
+            <%= link_to 'Show', dog %>
+          </p>
+        </div> <!-- end card-body div -->
+
+        <div class="card-footer">
+          <small class="text-muted"><%= time_ago_in_words(dog.created_at) %> ago</small>
+        </div>
+
+      </div> <!-- end card div -->
+
 
 
     <% end %>
   </div> <!-- end card-column -->
 </div> <!-- end container -->
+
+
+
+<%= render "partials/nav" %>
