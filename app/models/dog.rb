@@ -4,7 +4,7 @@ class Dog < ApplicationRecord
 
   def self.search(term)
     if term
-      where('name ILIKE ?', "%#{term}%").order('id DESC')
+      where('name ILIKE ? OR description ILIKE ?', "%#{term}%", "%#{term}%").order('id DESC')
     else
       order('id DESC')
     end
