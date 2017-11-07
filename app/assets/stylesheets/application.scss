@@ -16,8 +16,30 @@
 
 @import "bootstrap";
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 // nav
 .nav-link, .fa {
   display: inline;
 }
 // end nav
+
+// show dog page
+.dog-pic {
+  max-height: 330px;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.dog-show-texts {
+  text-align: center;
+}
+
+.text-go-right {
+  text-align: right;
+}
+// end show dog page
