@@ -82,18 +82,15 @@
     </div>
   </div><!-- end row -->
 
-  <p>
+  <p class="dog-show-texts">
     <strong>Address:</strong>
     <%= @dog.address %>
   </p>
-  <p>
-    <strong>Latitude:</strong>
-    <%= @dog.latitude %>
-  </p>
-  <p>
-    <strong>Longitude:</strong>
-    <%= @dog.longitude %>
-  </p>
+
+  <h4 class="dog-show-texts">Owner: <%= @dog.user.username %></h4>
+  <% unless @dog.user.id == current_user.id%>
+    <p class="dog-show-texts"><%= link_to 'Message me!', conversations_path(sender_id: current_user.id, recipient_id: @dog.user.id), method: 'post'%></p>
+  <% end %>
 
   <%# image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@dog.latitude}%2C#{@dog.longitude}" %>
 
