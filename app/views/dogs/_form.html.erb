@@ -41,6 +41,19 @@
     <%= form.file_field :image %>
   </div>
 
+  <div>
+    <%= form.label :address %><br />
+    <%= form.text_field :address %>
+  </div>
+  <div>
+    <%= form.label :latitude %><br />
+    <%= form.text_field :latitude, placeholder: "optional" %>
+  </div>
+  <div>
+    <%= form.label :longitude %><br />
+    <%= form.text_field :longitude, placeholder: "optional" %>
+  </div>
+
   <div class="field">
     <%= form.label :tricks %>
     <%= form.check_box :tricks, id: :dog_tricks %>

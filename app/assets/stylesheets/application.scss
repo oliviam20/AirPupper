@@ -33,7 +33,10 @@ html {
 
 // show dog page
 .dog-pic {
+  height:330px;
+  width:330px;
   max-height: 330px;
+  max-width: 330px;
   border-radius: 100%;
   border: 2px solid white;
   display: block;
