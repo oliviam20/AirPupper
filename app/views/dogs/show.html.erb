@@ -1,68 +1,87 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Name:</strong>
-  <%= @dog.name %>
-</p>
+  <div class="row">
+    <div class="col">
+      <%= link_to '', dogs_path, class: "fa fa-angle-left fa-3x" %>
+    </div>
+    <div class="col text-go-right">
+      <p>
+        <% if @dog.user_id == current_user.id %>
+          <%= link_to '', @dog, method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o fa-3x" %>
+        <% end %>
+      </p>
+    </div>
+  </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @dog.price %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Breed:</strong>
-  <%= @dog.breed %>
-</p>
+  <p>
+    <%= image_tag(@dog.image_url.to_s, class: "dog-pic") %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @dog.description %>
-</p>
+  <p class="dog-show-texts">
+    <% if @dog.user_id == current_user.id %>
+      <%= link_to 'Edit', edit_dog_path(@dog) %>
+    <% end %>
+  </p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @dog.age %>
-</p>
+  <h2 class="dog-show-texts">
+    <%= @dog.name %>, <%= @dog.age %>
+  </h2>
 
-<p>
-  <%= image_tag(@dog.image_url.to_s) %>
-</p>
+  <p class="dog-show-texts">
+    $<%= @dog.price %>/hr
+  </p>
 
-<p>
-  <strong>Tricks:</strong>
-  <%= @dog.tricks %>
-</p>
+  <p class="dog-show-texts">
+    <%= @dog.breed %>
+  </p>
 
-<p>
-  <strong>Kid friendly:</strong>
-  <%= @dog.kid_friendly %>
-</p>
+  <p class="dog-show-texts">
+    <%= @dog.description %>
+  </p>
 
-<p>
-  <strong>Obedient:</strong>
-  <%= @dog.obedient %>
-</p>
+  <div class="row">
+    <div class="col">
+      <% if @dog.tricks? %>
+        <p class="dog-show-texts">Tricks</p>
+      <% end %>
+    </div>
+    <div class="col">
+      <% if @dog.kid_friendly? %>
+        <p class="dog-show-texts">Kid friendly</p>
+      <% end %>
+    </div>
+    <div class="col">
+      <% if @dog.obedient? %>
+        <p class="dog-show-texts">Obedient</p>
+      <% end %>
+    </div>
+  </div><!-- end row -->
 
-<p>
-  <strong>Energetic:</strong>
-  <%= @dog.energetic %>
-</p>
+  <div class="row">
+    <div class="col">
+    <% if @dog.energetic? %>
+      <p class="dog-show-texts">Energetic</p>
+    <% end %>
+    </div>
+    <div class="col">
+      <% if @dog.small? %>
+        <p class="dog-show-texts">Small</p>
+      <% end %>
+    </div>
+    <div class="col">
+      <% if @dog.medium? %>
+        <p class="dog-show-texts">Medium</p>
+      <% end %>
+    </div>
+    <div class="col">
+      <% if @dog.large? %>
+        <p class="dog-show-texts">Large</p>
+      <% end %>
+    </div>
+  </div><!-- end row -->
 
-<p>
-  <strong>Small:</strong>
-  <%= @dog.small %>
-</p>
+</div> <!-- end container div -->
 
-<p>
-  <strong>Medium:</strong>
-  <%= @dog.medium %>
-</p>
-
-<p>
-  <strong>Large:</strong>
-  <%= @dog.large %>
-</p>
-
-<%= link_to 'Edit', edit_dog_path(@dog) %> |
-<%= link_to 'Back', dogs_path %>
+<%= render "partials/nav" %>
