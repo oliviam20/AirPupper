@@ -53,6 +53,10 @@ html {
 .card-body {
   text-align: center;
 }
+
+.put-this-center {
+  text-align: center;
+}
 // end index dog page
 
 // show dog page
@@ -75,3 +79,11 @@ html {
   text-align: right;
 }
 // end show dog page
+
+// edit user page
+.edit-user-page {
+  height: 100vh;
+  background-size: cover;
+  text-align: center;
+}
+// end edit user page
