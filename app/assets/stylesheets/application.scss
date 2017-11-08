@@ -43,7 +43,7 @@ html {
 // end nav
 
 // login page
-.login-page {
+.login-page, .forgot-password-page, .sign-up-page {
   height: 100vh;
   background-size: cover;
   text-align: center;
@@ -54,6 +54,7 @@ html {
   width: auto;
 }
 // end login page
+
 
 // index dog page
 .dog-index-page {
