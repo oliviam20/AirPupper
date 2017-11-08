@@ -33,6 +33,24 @@
     $<%= @dog.price %>/hr
   </p>
 
+  <% unless current_user.id == @dog.user_id %>
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="Booking for <%= @dog.name %>"
+              data-amount= <%= @dog.price * 100 %>
+              data-locale="auto"></script>
+    <% end %>
+  <% end %>
+
   <p class="dog-show-texts">
     <%= @dog.breed %>
   </p>
