@@ -24,55 +24,43 @@
         <%= image_tag(dog.image_url.to_s, class: "picture_icon, card-img-top") %>
 
         <div class="card-body">
-          <h4 class="card-title"><%= dog.name %>, <%= dog.age %></h4>
+          <h3 class="card-title"><%= dog.name %>, <%= dog.age %></h3>
           <p class="card-text">
             <p>$<%= dog.price %></p>
             <p><%= dog.breed %></p>
             <p>Posted by <%= dog.user.username %></p>
-            <%= dog.description %>
-            <br><br>
+            <br>
+            <p><%= dog.description %></p>
 
-            <div class="row">
-              <div class="col">
-                <% if dog.tricks? %>
-                  <p>Tricks</p>
-                <% end %>
-              </div>
-              <div class="col">
-                <% if dog.kid_friendly? %>
-                  <p>Kid friendly</p>
-                <% end %>
-              </div>
-              <div class="col">
-                <% if dog.obedient? %>
-                  <p>Obedient</p>
-                <% end %>
-              </div>
-            </div><!-- end row -->
+            <br>
 
-            <div class="row">
-              <div class="col">
-              <% if dog.energetic? %>
-                <p>Energetic</p>
-              <% end %>
-              </div>
-              <div class="col">
-                <% if dog.small? %>
-                  <p>Small</p>
-                <% end %>
-              </div>
-              <div class="col">
-                <% if dog.medium? %>
-                  <p>Medium</p>
-                <% end %>
-              </div>
-              <div class="col">
-                <% if dog.large? %>
-                  <p>Large</p>
-                <% end %>
-              </div>
-            </div><!-- end row -->
+            <% if dog.tricks? %>
+              <p>Tricks</p>
+            <% end %>
 
+            <% if dog.kid_friendly? %>
+              <p>Kid friendly</p>
+            <% end %>
+
+            <% if dog.obedient? %>
+              <p>Obedient</p>
+            <% end %>
+
+            <% if dog.energetic? %>
+              <p>Energetic</p>
+            <% end %>
+
+            <% if dog.small? %>
+              <p>Small</p>
+            <% end %>
+
+            <% if dog.medium? %>
+              <p>Medium</p>
+            <% end %>
+
+            <% if dog.large? %>
+              <p>Large</p>
+            <% end %>
           </p>
 
           <p>
