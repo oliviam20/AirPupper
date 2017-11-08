@@ -1,23 +1,22 @@
 <p id="notice"><%# notice %></p>
 
-<h1 class="dog-show-texts" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">AirPupper</h1>
+<div class="container dog-index-page">
 
-<p class="dog-show-texts" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><%= link_to 'New Dog', new_dog_path %></p>
+  <h1 class="dog-show-texts" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">AirPupper</h1>
 
-<div class="row" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-  <div class="col-12">
-    <p class="form">
-      <%= form_tag(dogs_path, method: :get) do %>
-        <%= text_field_tag :term, params[:term] %>
-        <%= submit_tag 'Search', name: nil %>
-      <% end %>
-    </p>
+  <p class="dog-show-texts" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><%= link_to 'New Dog', new_dog_path %></p>
+
+  <div class="row put-this-center" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+    <div class="col-12">
+      <p class="form">
+        <%= form_tag(dogs_path, method: :get) do %>
+          <p><%= text_field_tag :term, params[:term], class: "form-control" %></p>
+          <p><%= submit_tag 'Search', name: nil, class: "btn btn-outline-dark" %></p>
+        <% end %>
+      </p>
+    </div>
   </div>
-</div>
 
-
-
-<div class="container">
   <div class="card-columns">
     <% @dogs.reverse.each do |dog| %>
       <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
