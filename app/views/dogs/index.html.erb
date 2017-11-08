@@ -1,78 +1,65 @@
-<p id="notice"><%= notice %></p>
+<p id="notice"><%# notice %></p>
 
-<h1 class="dog-show-texts">AirPupper</h1>
+<div class="container dog-index-page">
 
-<p class="dog-show-texts"><%= link_to 'New Dog', new_dog_path %></p>
+  <h1 class="dog-show-texts" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">AirPupper</h1>
 
-<div class="row">
-  <div class="col-12">
-    <p class="form">
-      <%= form_tag(dogs_path, method: :get) do %>
-        <%= text_field_tag :term, params[:term] %>
-        <%= submit_tag 'Search', name: nil %>
-      <% end %>
-    </p>
+  <p class="dog-show-texts" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><%= link_to 'New Dog', new_dog_path %></p>
+
+  <div class="row put-this-center" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+    <div class="col-12">
+      <p class="form">
+        <%= form_tag(dogs_path, method: :get) do %>
+          <p><%= text_field_tag :term, params[:term], class: "form-control" %></p>
+          <p><%= submit_tag 'Search', name: nil, class: "btn btn-outline-dark" %></p>
+        <% end %>
+      </p>
+    </div>
   </div>
-</div>
 
-
-
-<div class="container">
   <div class="card-columns">
     <% @dogs.reverse.each do |dog| %>
-      <div class="card">
+      <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
         <%= image_tag(dog.image_url.to_s, class: "picture_icon, card-img-top") %>
 
         <div class="card-body">
-          <h4 class="card-title"><%= dog.name %>, <%= dog.age %></h4>
+          <h3 class="card-title"><%= dog.name %>, <%= dog.age %></h3>
           <p class="card-text">
             <p>$<%= dog.price %></p>
             <p><%= dog.breed %></p>
             <p>Posted by <%= dog.user.username %></p>
-            <%= dog.description %>
-            <br><br>
+            <br>
+            <p><%= dog.description %></p>
 
-            <div class="row">
-              <div class="col">
-                <% if dog.tricks? %>
-                  <p>Tricks</p>
-                <% end %>
-              </div>
-              <div class="col">
-                <% if dog.kid_friendly? %>
-                  <p>Kid friendly</p>
-                <% end %>
-              </div>
-              <div class="col">
-                <% if dog.obedient? %>
-                  <p>Obedient</p>
-                <% end %>
-              </div>
-            </div><!-- end row -->
+            <br>
 
-            <div class="row">
-              <div class="col">
-              <% if dog.energetic? %>
-                <p>Energetic</p>
-              <% end %>
-              </div>
-              <div class="col">
-                <% if dog.small? %>
-                  <p>Small</p>
-                <% end %>
-              </div>
-              <div class="col">
-                <% if dog.medium? %>
-                  <p>Medium</p>
-                <% end %>
-              </div>
-              <div class="col">
-                <% if dog.large? %>
-                  <p>Large</p>
-                <% end %>
-              </div>
-            </div><!-- end row -->
+            <% if dog.tricks? %>
+              <p>Tricks</p>
+            <% end %>
 
+            <% if dog.kid_friendly? %>
+              <p>Kid friendly</p>
+            <% end %>
+
+            <% if dog.obedient? %>
+              <p>Obedient</p>
+            <% end %>
+
+            <% if dog.energetic? %>
+              <p>Energetic</p>
+            <% end %>
+
+            <% if dog.small? %>
+              <p>Small</p>
+            <% end %>
+
+            <% if dog.medium? %>
+              <p>Medium</p>
+            <% end %>
+
+            <% if dog.large? %>
+              <p>Large</p>
+            <% end %>
           </p>
 
           <p>
@@ -96,6 +83,8 @@
   </div> <!-- end card-column -->
 </div> <!-- end container -->
 
+
+<script>AOS.init();</script><!-- This is for the fade in effects -->
 
 
 <%= render "partials/nav" %>

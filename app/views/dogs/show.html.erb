@@ -33,6 +33,24 @@
     $<%= @dog.price %>/hr
   </p>
 
+  <% unless current_user.id == @dog.user_id %>
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="Booking for <%= @dog.name %>"
+              data-amount= <%= @dog.price * 100 %>
+              data-locale="auto"></script>
+    <% end %>
+  <% end %>
+
   <p class="dog-show-texts">
     <%= @dog.breed %>
   </p>
@@ -41,46 +59,38 @@
     <%= @dog.description %>
   </p>
 
-  <div class="row">
-    <div class="col">
-      <% if @dog.tricks? %>
-        <p class="dog-show-texts">Tricks</p>
-      <% end %>
-    </div>
-    <div class="col">
-      <% if @dog.kid_friendly? %>
-        <p class="dog-show-texts">Kid friendly</p>
-      <% end %>
-    </div>
-    <div class="col">
-      <% if @dog.obedient? %>
-        <p class="dog-show-texts">Obedient</p>
-      <% end %>
-    </div>
-  </div><!-- end row -->
+  <br>
 
-  <div class="row">
-    <div class="col">
-    <% if @dog.energetic? %>
-      <p class="dog-show-texts">Energetic</p>
-    <% end %>
-    </div>
-    <div class="col">
-      <% if @dog.small? %>
-        <p class="dog-show-texts">Small</p>
-      <% end %>
-    </div>
-    <div class="col">
-      <% if @dog.medium? %>
-        <p class="dog-show-texts">Medium</p>
-      <% end %>
-    </div>
-    <div class="col">
-      <% if @dog.large? %>
-        <p class="dog-show-texts">Large</p>
-      <% end %>
-    </div>
-  </div><!-- end row -->
+  <% if @dog.tricks? %>
+    <p class="dog-show-texts">Tricks</p>
+  <% end %>
+
+  <% if @dog.kid_friendly? %>
+    <p class="dog-show-texts">Kid friendly</p>
+  <% end %>
+
+  <% if @dog.obedient? %>
+    <p class="dog-show-texts">Obedient</p>
+  <% end %>
+
+  <% if @dog.energetic? %>
+    <p class="dog-show-texts">Energetic</p>
+  <% end %>
+
+  <% if @dog.small? %>
+    <p class="dog-show-texts">Small</p>
+  <% end %>
+
+  <% if @dog.medium? %>
+    <p class="dog-show-texts">Medium</p>
+  <% end %>
+
+  <% if @dog.large? %>
+    <p class="dog-show-texts">Large</p>
+  <% end %>
+
+  <br>
+
 
   <p class="dog-show-texts">
     <strong>Address:</strong>
@@ -111,9 +121,11 @@
           google.maps.event.addDomListener(window, 'load', initialize);
       </script>
 
-      <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClNsiY6bP91YjjPIJYq7dkPbH6xj37ldU&callback=initMap">
-      </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClNsiY6bP91YjjPIJYq7dkPbH6xj37ldU&callback=initMap">
+  </script>
+
+  <br>
 
 </div> <!-- end container div -->
 

@@ -15,5 +15,6 @@
 //= require_tree .
 
 //= require jquery3
+//= require toastr
 //= require popper
 //= require bootstrap-sprockets

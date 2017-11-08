@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container messages-page">
   <% if @over_ten %>
      <%= link_to 'Show Previous', '?m=all' %>
   <% end %>
 
-  <%= link_to 'Back', dogs_path %>
+  <%= link_to '', conversations_path(@user_id), class: "fa fa-angle-left fa-3x" %>
 
   <div class="ui segment">
     <% @messages.each do |message| %>
@@ -24,16 +24,21 @@
     <% end %>
   </div>
 
-  <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
-    <div class="field">
-      <%= f.text_area :body, class: "form-control" %>
-    </div>
-      <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-    <div>
-      <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
-    </div>
 
-  <% end %>
+  <div class="message-area">
+    <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+      <div class="field">
+        <%= f.text_area :body, class: "form-control" %>
+      </div>
+        <%= f.text_field :user_id, value: current_user.id, type: "hidden", class:"form-control" %>
+      <div>
+        <%= f.submit "Add Reply", class: "btn btn-outline-dark" %>
+      </div>
+    <% end %>
+  </div>
+
+
+
 </div> <!-- end container -->
 
 <%= render "partials/nav" %>

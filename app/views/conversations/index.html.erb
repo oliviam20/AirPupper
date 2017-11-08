@@ -1,9 +1,20 @@
-<div class="container">
+<div class="container mail-box-page">
+
+  <br>
+
+  <div class="row">
+    <div class="col">
+      <%= link_to '', dogs_path, class: "fa fa-angle-left fa-3x" %>
+    </div>
+    <div class="col"></div>
+  </div>
+
 
   <div class="ui segment">
+    <br>
     <h3>Mailbox</h3>
 
-    <%= link_to 'Back', dogs_path %>
+
 
     <div class="ui list">
       <div class="item">
@@ -21,9 +32,14 @@
     </div>
   </div>
 
+  <br>
+
 
   <div class="ui segment">
+    <br>
+    <br>
     <h3>All Users</h3>
+    <br>
     <div class="ui list">
       <% @users.each do |user| %>
         <% if user.id != current_user.id %>
