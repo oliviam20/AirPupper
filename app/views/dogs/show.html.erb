@@ -35,6 +35,7 @@
     $<%= @dog.price %>/hr
   </p>
 
+<div class="put-this-center">
   <% unless current_user.id == @dog.user_id %>
     <%= form_tag charges_path do %>
       <article>
@@ -52,6 +53,9 @@
               data-locale="auto"></script>
     <% end %>
   <% end %>
+</div>
+
+<br>
 
   <p class="dog-show-texts">
     <%= @dog.breed %>
