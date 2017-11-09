@@ -5,6 +5,12 @@
 * [Project brief](#project-brief)
 * [Problem](#problem)
 * [Solution](#solution)
+* [Technology stack](#technology-stack)
+* [Concept, Design & Build](#concept-design-build)
+* [User stories](#user-stories)
+* [Wireframe](#wireframe)
+* [Back-end: DB schema design](#Back-end: DB schema design)
+* [Style guide](#style-guide)
 
 ## Project Brief
 
@@ -32,12 +38,67 @@ The secondary service is connecting dog owners to go on doggy dates. Dog owners 
 
 [Return to overview](#overview)
 
-## Design
+## Technology Stack
 
-### User stories
+Front-end:
+* HTML, CSS, Bootstrap  
+
+Back-end:
+* Ruby on Rails
+
+[Return to overview](#overview)
+
+## Concept, Design and build
+
+To kick off the project, I talked to key stakeholders to determine the requirements and expectations for the project. After gathering the information, I went ahead to create a low fidelity sketch of the dog renting platform.
+
+### Concept
+
+I drew low fidelity sketches on a whiteboard and concentrated on mobile first design.
+Concepts include:
+* A button to create a new listings of dogs
+* A list to display existing dogs, and what information to include (key dog details, photos)
+* Information divided into different pages of the platform (e.g. location, price)
+
+### Design
+
+Next I used Figma to create high fidelity designs of my hand drawn concepts and further refine the user interface.
+
+### Build
+
+I built the MVP in Rails. Using Bootstrap with Rails as well as various icon providers like Font Awesome.
+
+[Return to overview](#overview)
+
+## User stories
 
 User stories can be found [here](https://trello.com/b/pEzn2BLx/airpupper).
 
-### Wireframe
+[Return to overview](#overview)
+
+## Wireframe
 
 The wireframe can be found [here](https://www.figma.com/file/HD815GS7VpxNAl14yATSUXK7/Pupper).
+
+[Return to overview](#overview)
+
+## Back-end: DB schema design
+
+As for the backend, we have planned the DB schema as follows to serve as a reference when building the backend Rails server.
+
+
+[Return to overview](#overview)
+
+## Style Guide
+
+### CSS
+
+The decision was made to use Bootstrap due to its ease of use and existing components (such as buttons, cards, forms). I believe that this widely used framework will enhance the user experience.
+
+### Colour
+
+Colours selected for our app were based on the customer's existing website.
+From this, we continued the theme with complementary shades of blue, to convey a
+professional and unobtrusive experience.
+
+[Return to overview](#overview)
