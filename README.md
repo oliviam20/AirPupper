@@ -9,7 +9,7 @@
 * [Concept, Design & Build](#concept-design-build)
 * [User stories](#user-stories)
 * [Wireframe](#wireframe)
-* [Back-end: DB schema design](#Back-end: DB schema design)
+* [Back-end: DB schema design](#back-end: db schema design)
 * [Style guide](#style-guide)
 
 ## Project Brief
@@ -86,6 +86,8 @@ The wireframe can be found [here](https://www.figma.com/file/HD815GS7VpxNAl14yAT
 
 As for the backend, we have planned the DB schema as follows to serve as a reference when building the backend Rails server.
 
+![DB design](https://github.com/moiscraycray/AirPupper/blob/master/airpupper-db.png)
+
 
 [Return to overview](#overview)
 
@@ -97,8 +99,14 @@ The decision was made to use Bootstrap due to its ease of use and existing compo
 
 ### Colour
 
-Colours selected for our app were based on the customer's existing website.
-From this, we continued the theme with complementary shades of blue, to convey a
-professional and unobtrusive experience.
+Colours selected for the app were based on feel.
+From this, the theme was created with complementary shades for an unobtrusive and clear user experience.
+
+Item | Colour | HEX  
+---: | -----:| ---
+Primary 1 | ![Primary](image) | #FBDA61   
+Secondary 1 | ![Secondary 1](image) | #ffb0e5
+Secondary 2 | ![Secondary 2](image) | #E3F8FF
+Font | ![Font 1](image) | #000000
 
 [Return to overview](#overview)
