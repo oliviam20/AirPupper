@@ -1,5 +1,7 @@
 <div class="container">
 
+  <br>
+
   <div class="row">
     <div class="col">
       <%= link_to '', dogs_path, class: "fa fa-angle-left fa-3x" %>
@@ -13,7 +15,7 @@
     </div>
   </div>
 
-  <p id="notice"><%= notice %></p>
+  <p id="notice"><%# notice %></p>
 
   <p>
     <%= image_tag(@dog.image_url.to_s, class: "dog-pic") %>

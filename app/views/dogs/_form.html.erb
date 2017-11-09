@@ -12,84 +12,105 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :dog_name %>
+    <%= form.label :name %> <br>
+    <%= form.text_field :name, id: :dog_name, class: "form-control", placeholder: "Enter dog's name" %>
   </div>
 
-  <div class="field">
-    <%= form.label :price %> $/hour
-    <%= form.text_field :price, id: :dog_price %>
-  </div>
+  <br>
 
   <div class="field">
-    <%= form.label :breed %>
-    <%= form.text_area :breed, id: :dog_breed %>
+    <%= form.label :price %> $/hour <br>
+    <%= form.text_field :price, id: :dog_price, class: "form-control", placeholder: "Enter as 00.00" %>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :dog_description %>
-  </div>
+  <br>
 
   <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age, id: :dog_age %>
+    <%= form.label :breed %> <br>
+    <%= form.text_area :breed, id: :dog_breed, class: "form-control", placeholder: "Enter breed" %>
   </div>
 
+
+  <br>
+
   <div class="field">
-    add an image....
+    <%= form.label :description %> <br>
+    <%= form.text_area :description, id: :dog_description, class: "form-control", placeholder: "minimum 20 characters" %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    <%= form.label :age %> <br>
+    <%= form.number_field :age, id: :dog_age, class: "form-control", placeholder: "minimum 0" %>
+  </div>
+
+  <br>
+
+  <div class="field">
+    add an image.... <br>
     <%= form.file_field :image %>
   </div>
 
+  <br>
+
   <div>
     <%= form.label :address %><br />
-    <%= form.text_field :address %>
-  </div>
-  <div>
-    <%= form.label :latitude %><br />
-    <%= form.text_field :latitude, placeholder: "optional" %>
-  </div>
-  <div>
-    <%= form.label :longitude %><br />
-    <%= form.text_field :longitude, placeholder: "optional" %>
+    <%= form.text_field :address, class: "form-control", placeholder: "Enter full address" %>
   </div>
 
-  <div class="field">
+  <br>
+
+  <div>
+    <%= form.label :latitude %><br />
+    <%= form.text_field :latitude, class: "form-control", placeholder: "optional" %>
+  </div>
+
+  <br>
+  
+  <div>
+    <%= form.label :longitude %><br />
+    <%= form.text_field :longitude, class: "form-control", placeholder: "optional" %>
+  </div>
+
+  <br>
+
+  <div class="field dog-show-texts">
     <%= form.label :tricks %>
     <%= form.check_box :tricks, id: :dog_tricks %>
   </div>
 
-  <div class="field">
+  <div class="field dog-show-texts">
     <%= form.label :kid_friendly %>
     <%= form.check_box :kid_friendly, id: :dog_kid_friendly %>
   </div>
 
-  <div class="field">
+  <div class="field dog-show-texts">
     <%= form.label :obedient %>
     <%= form.check_box :obedient, id: :dog_obedient %>
   </div>
 
-  <div class="field">
+  <div class="field dog-show-texts">
     <%= form.label :energetic %>
     <%= form.check_box :energetic, id: :dog_energetic %>
   </div>
 
-  <div class="field">
+  <div class="field dog-show-texts">
     <%= form.label :small %>
     <%= form.check_box :small, id: :dog_small %>
   </div>
 
-  <div class="field">
+  <div class="field dog-show-texts">
     <%= form.label :medium %>
     <%= form.check_box :medium, id: :dog_medium %>
   </div>
 
-  <div class="field">
+  <div class="field dog-show-texts">
     <%= form.label :large %>
     <%= form.check_box :large, id: :dog_large %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions dog-show-texts">
+    <%= form.submit class: "btn btn-outline-dark" %>
   </div>
 <% end %>
