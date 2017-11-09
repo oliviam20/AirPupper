@@ -12,12 +12,15 @@
   * [Build](#build)
 * [User stories](#user-stories)
 * [Wireframe](#wireframe)
-* [Back-end: DB schema design](#back-end:-db schema-design)
+* [Back-end: DB schema design](#back-end:-db-schema-design)
 * [Style guide](#style-guide)
   * [CSS](#css)
   * [Colours](#colours)
   * [Font Style](#font-style)
   * [Graphics](#graphics)
+* [Setup](#setup)
+* [Deployment](#deployment)
+* [Outstanding Issues](#outstanding-issues)
 
 ## Project Brief
 
@@ -141,4 +144,32 @@ Icons were taken from [Font Awesome](http://fontawesome.io/icons/). Font awesome
 
 Clone the repo:
 
-`https://github.com/moiscraycray/AirPupper.git`
+`$ git clone https://github.com/moiscraycray/AirPupper.git`
+
+Then run:
+
+`$ bundle install`
+
+Then run:
+
+`$ rails db:migrate`
+
+Then run the server:
+
+`$ rails s`
+
+[Return to overview](#overview)
+
+## Deployment
+
+If deploying to Heroku, remember to run:
+
+`$ heroku run rails db:migrate`
+
+[Return to overview](#overview)
+
+## Outstanding Issues
+
+Please see [issues](https://github.com/moiscraycray/AirPupper/issues) for existing bugs with the app.
+
+[Return to overview](#overview)
