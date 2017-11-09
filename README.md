@@ -17,6 +17,7 @@
   * [CSS](#css)
   * [Colours](#colours)
   * [Font Style](#font-style)
+  * [Graphics](#graphics)
 
 ## Project Brief
 
@@ -98,8 +99,7 @@ The wireframe can be found [here](https://www.figma.com/file/HD815GS7VpxNAl14yAT
 
 As for the backend, we have planned the DB schema as follows to serve as a reference when building the backend Rails server.
 
-![DB design](https://github.com/moiscraycray/AirPupper/blob/master/airpupper-db.png)
-
+![DB design](read-img/airpupper-db.png)
 
 [Return to overview](#overview)
 
@@ -118,10 +118,10 @@ From this, the theme was created with complementary shades for an unobtrusive an
 
 Item | Colour | RGB | Hex  
 ---: | -----:| -----:| ---
-Primary 1 | ![Primary](image) | (251,218,97) | #FBDA61   
-Secondary 1 | ![Secondary 1](image) | 255,176,229 | #FFB0E5
-Secondary 2 | ![Secondary 2](image) | 227,248,255 | #E3F8FF
-Font | ![Font 1](image) | (0,0,0,0.70) | #000000
+Primary 1 | ![Primary](read-img/yellow.png) | (251,218,97) | #FBDA61   
+Secondary 1 | ![Secondary 1](read-img/pink.png) | 255,176,229 | #FFB0E5
+Secondary 2 | ![Secondary 2](read-img/light-blue.png) | 227,248,255 | #E3F8FF
+Font | ![Font 1](read-img/black.png) | (0,0,0,0.70) | #000000
 
 [Return to overview](#overview)
 
@@ -130,3 +130,15 @@ Font | ![Font 1](image) | (0,0,0,0.70) | #000000
 I wanted to present a cleanly designed style so it's easy for users to access content. To do this, only one font was selected for everything because I wanted everything to be uniform and prevents the app from becoming too busy with changing fonts. I chose a popular sans-serif font, RALEWAY, available from [Google Fonts](https://fonts.google.com/specimen/Raleway). I chose RALEWAY because it's a simple, clean font. I set the opacity of the font to 0.7 so it doesn't stand too boldly against the background.
 
 [Return to overview](#overview)
+
+### Graphics
+
+Icons were taken from [Font Awesome](http://fontawesome.io/icons/). Font awesome was chosen due to its minimal and flat design to prevent the app appearing too cluttered for better user experience.
+
+[Return to overview](#overview)
+
+## Setup
+
+Clone the repo:
+
+`https://github.com/moiscraycray/AirPupper.git`
