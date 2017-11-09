@@ -12,7 +12,7 @@
   * [Build](#build)
 * [User stories](#user-stories)
 * [Wireframe](#wireframe)
-* [Back-end: DB schema design](#back-end:-db-schema-design)
+* [Back-end: DB schema design](#back-end)
 * [Style guide](#style-guide)
   * [CSS](#css)
   * [Colours](#colours)
@@ -98,7 +98,7 @@ The wireframe can be found [here](https://www.figma.com/file/HD815GS7VpxNAl14yAT
 
 [Return to overview](#overview)
 
-## Back-end: DB schema design
+## Back-end
 
 As for the backend, we have planned the DB schema as follows to serve as a reference when building the backend Rails server.
 
