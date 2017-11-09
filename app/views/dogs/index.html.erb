@@ -2,11 +2,11 @@
 
 <div class="container dog-index-page">
 
-  <h1 class="dog-show-texts" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">AirPupper</h1>
+  <h1 class="dog-show-texts">AirPupper</h1>
 
-  <p class="dog-show-texts" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true"><%= link_to 'New Dog', new_dog_path %></p>
+  <p class="dog-show-texts"><%= link_to 'New Dog', new_dog_path %></p>
 
-  <div class="row put-this-center" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+  <div class="row put-this-center">
     <div class="col-12">
       <p class="form">
         <%= form_tag(dogs_path, method: :get) do %>
@@ -19,7 +19,7 @@
 
   <div class="card-columns">
     <% @dogs.reverse.each do |dog| %>
-      <div class="card" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+      <div class="card">
         <%= image_tag(dog.image_url.to_s, class: "picture_icon, card-img-top") %>
 
         <div class="card-body">
