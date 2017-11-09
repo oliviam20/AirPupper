@@ -15,4 +15,5 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
 
   has_many :conversations, :foreign_key => :sender_id
+
 end
