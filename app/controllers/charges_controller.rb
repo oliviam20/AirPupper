@@ -1,12 +1,13 @@
 class ChargesController < ApplicationController
 
+  before_action :set_dog
 
   def new
   end
 
   def create
     # Amount in cents
-    @amount = 500
+    @amount = @dog.price.to_i * 100
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
@@ -24,4 +25,12 @@ class ChargesController < ApplicationController
     flash[:error] = e.message
     redirect_to new_charge_path
   end
+
+  private
+
+    def set_dog
+      @dog = Dog.find_by(params[:dog_id])
+
+
+    end
 end
