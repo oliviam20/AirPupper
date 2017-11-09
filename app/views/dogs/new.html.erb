@@ -1,9 +1,14 @@
 <div class="container">
-  <h1>New Dog</h1>
+
+  <br>
+
+  <%= link_to '', dogs_path, class: "fa fa-angle-left fa-3x" %>
+
+  <h1 class="heading">New Dog</h1>
 
   <%= render 'form', dog: @dog %>
 
-  <%= link_to 'Back', dogs_path %>
+
 </div>
 
 

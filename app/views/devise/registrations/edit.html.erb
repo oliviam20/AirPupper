@@ -2,6 +2,8 @@
 
   <div class="edit-user-page">
 
+    <br>
+
     <div class="row">
       <div class="col">
         <%= link_to "", dogs_path, class: "fa fa-angle-left fa-3x" %>
@@ -30,6 +32,13 @@
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
+
+      <br>
+
+      <div class="field form-group">
+        <%= f.label :username %><br />
+        <%= f.email_field :username, class: "form-control", placeholder: "Username" %>
+      </div>
 
       <br><br>
 
@@ -62,6 +71,7 @@
     <% end %>
 
     <br><br>
+
 
     <h3>Cancel my account</h3>
 

@@ -1,8 +1,14 @@
-<h1>Editing Dog</h1>
 
-<%= render 'form', dog: @dog %>
+<div class="container">
+  <br>
+  <%= link_to '', @dog, class: "fa fa-angle-left fa-3x" %>
+  <br>
+  <h1 class="heading">Editing Dog</h1>
 
-<%= link_to 'Show', @dog %> |
-<%= link_to 'Back', dogs_path %>
+  <%= render 'form', dog: @dog %>
+
+</div>
+
+
 
 <%= render "partials/nav" %>
