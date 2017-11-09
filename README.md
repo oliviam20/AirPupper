@@ -7,10 +7,16 @@
 * [Solution](#solution)
 * [Technology stack](#technology-stack)
 * [Concept, Design & Build](#concept-design-build)
+  * [Concept](#concept)
+  * [Design](#design)
+  * [Build](#build)
 * [User stories](#user-stories)
 * [Wireframe](#wireframe)
-* [Back-end: DB schema design](#Back-end: DB schema design)
+* [Back-end: DB schema design](#back-end:-db schema-design)
 * [Style guide](#style-guide)
+  * [CSS](#css)
+  * [Colours](#colours)
+  * [Font Style](#font-style)
 
 ## Project Brief
 
@@ -52,6 +58,8 @@ Back-end:
 
 To kick off the project, I talked to key stakeholders to determine the requirements and expectations for the project. After gathering the information, I went ahead to create a low fidelity sketch of the dog renting platform.
 
+[Return to overview](#overview)
+
 ### Concept
 
 I drew low fidelity sketches on a whiteboard and concentrated on mobile first design.
@@ -60,9 +68,13 @@ Concepts include:
 * A list to display existing dogs, and what information to include (key dog details, photos)
 * Information divided into different pages of the platform (e.g. location, price)
 
+[Return to overview](#overview)
+
 ### Design
 
 Next I used Figma to create high fidelity designs of my hand drawn concepts and further refine the user interface.
+
+[Return to overview](#overview)
 
 ### Build
 
@@ -86,6 +98,8 @@ The wireframe can be found [here](https://www.figma.com/file/HD815GS7VpxNAl14yAT
 
 As for the backend, we have planned the DB schema as follows to serve as a reference when building the backend Rails server.
 
+![DB design](https://github.com/moiscraycray/AirPupper/blob/master/airpupper-db.png)
+
 
 [Return to overview](#overview)
 
@@ -95,10 +109,24 @@ As for the backend, we have planned the DB schema as follows to serve as a refer
 
 The decision was made to use Bootstrap due to its ease of use and existing components (such as buttons, cards, forms). I believe that this widely used framework will enhance the user experience.
 
-### Colour
+[Return to overview](#overview)
 
-Colours selected for our app were based on the customer's existing website.
-From this, we continued the theme with complementary shades of blue, to convey a
-professional and unobtrusive experience.
+### Colours
+
+Colours selected for the app were based on feel.
+From this, the theme was created with complementary shades for an unobtrusive and clear user experience.
+
+Item | Colour | RGB | Hex  
+---: | -----:| -----:| ---
+Primary 1 | ![Primary](image) | (251,218,97) | #FBDA61   
+Secondary 1 | ![Secondary 1](image) | 255,176,229 | #FFB0E5
+Secondary 2 | ![Secondary 2](image) | 227,248,255 | #E3F8FF
+Font | ![Font 1](image) | (0,0,0,0.70) | #000000
+
+[Return to overview](#overview)
+
+### Font Style
+
+I wanted to present a cleanly designed style so it's easy for users to access content. To do this, only one font was selected for everything because I wanted everything to be uniform and prevents the app from becoming too busy with changing fonts. I chose a popular sans-serif font, RALEWAY, available from [Google Fonts](https://fonts.google.com/specimen/Raleway). I chose RALEWAY because it's a simple, clean font. I set the opacity of the font to 0.7 so it doesn't stand too boldly against the background.
 
 [Return to overview](#overview)
