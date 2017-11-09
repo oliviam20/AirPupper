@@ -7,7 +7,7 @@ class ChargesController < ApplicationController
 
   def create
     # Amount in cents
-    @amount = @dog
+    @amount = @dog.price.to_i * 100
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
@@ -29,6 +29,8 @@ class ChargesController < ApplicationController
   private
 
     def set_dog
-      @dog = Dog.find(params[:dog_id])
+      @dog = Dog.find_by(params[:dog_id])
+
+
     end
 end
