@@ -40,6 +40,11 @@ html {
   text-align: center;
 }
 
+a, a:hover, a:visited, a:active {
+  text-decoration: none;
+  color: rgba(0,0,0,0.70);
+}
+
 
 // nav
 .nav-link, .fa {
