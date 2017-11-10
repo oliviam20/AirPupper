@@ -90,6 +90,8 @@ I built the MVP in Rails. Using Bootstrap with Rails as well as various icon pro
 
 User stories can be found [here](https://trello.com/b/pEzn2BLx/airpupper).
 
+Timeline of tasks were also defined within the same Trello.
+
 [Return to overview](#overview)
 
 ## Wireframe
