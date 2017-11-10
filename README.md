@@ -123,10 +123,10 @@ From this, the theme was created with complementary shades for an unobtrusive an
 
 Item | Colour | RGB | Hex  
 ---: | -----:| -----:| ---
-Primary 1 | ![Primary](read-img/yellow.png) | (251,218,97) | #FBDA61   
+Primary 1 | ![Primary](read-img/yellow.png) | 251,218,97 | #FBDA61   
 Secondary 1 | ![Secondary 1](read-img/pink.png) | 255,176,229 | #FFB0E5
 Secondary 2 | ![Secondary 2](read-img/light-blue.png) | 227,248,255 | #E3F8FF
-Font | ![Font 1](read-img/black.png) | (0,0,0,0.70) | #000000
+Font | ![Font 1](read-img/black.png) | 0,0,0,0.70 | #000000
 
 [Return to overview](#overview)
 
